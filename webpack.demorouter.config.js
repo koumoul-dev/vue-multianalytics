@@ -1,31 +1,18 @@
 var path = require('path')
-var webpack = require('webpack')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-  entry: [
-    './demo/router/main.js'
-  ],
+  entry: './demo/router/main.js',
+  mode: 'development',
   output: {
-    filename: 'demo/router/compiled.js'
-  },
-  plugins: [],
-  resolve: {
-    extensions: [ '', '.js', '.json' ]
+    path: path.resolve(__dirname, 'demo/router'),
+    filename: "compiled.js"
   },
   module: {
-    loaders: [
-      {
-        test: /\.vue$/,
-        loader: 'vue'
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          presets: [ 'env', 'stage-2' ]
-        },
-        exclude: /node_modules/
-      }
-    ]
-  }
+    rules: [{
+      test: /\.vue$/,
+      loader: 'vue-loader'
+    }]
+  },
+  plugins: [new VueLoaderPlugin()]
 }

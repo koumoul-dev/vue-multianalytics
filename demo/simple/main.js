@@ -1,5 +1,5 @@
 import Vue from 'vue/dist/vue.js'
-import VueMultianalytics from '../../dist/vue-multianalytics.min'
+import VueMultianalytics from '../../src/index'
 import analyticsMixin from './analytics-mixin'
 
 
@@ -19,17 +19,14 @@ let mixpanelConfig = {
   debug: true
 }
 
-VueMultianalytics.addCustomModule('myOwnModule', class Hello {
-  constructor() {
-    console.log('intantiated')
-  }
+VueMultianalytics.addCustomModule('myOwnModule', class Hello extends VueMultianalytics.BasicModule {
   init () {console.log('hello')}
 })
 
 Vue.use(VueMultianalytics, {
   modules: {
-    ga: gaConfig,
-    mixpanel: mixpanelConfig
+    ga: gaConfig
+    // mixpanel: mixpanelConfig
   }
 }, analyticsMixin)
 let template = `
@@ -53,7 +50,7 @@ const app = new Vue({
     message: 'Hello MultiAnalytics'
   },
   mounted () {
-    console.log(this.$ma)
+    console.log('BOUM', this.$ma)
   },
   methods: {
     trackEvent () {

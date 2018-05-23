@@ -8,8 +8,9 @@
   "homepage": "https://github.com/Glovo/vue-multianalytics",
   "scripts": {
     "build": "webpack",
-    "demo": "webpack --config webpack.demo.config.js",
-    "demoRouter": "webpack --config webpack.demorouter.config.js"
+    "prepublish": "npm run build",
+    "demo": "webpack --config webpack.demo.config.js --watch",
+    "demoRouter": "webpack --config webpack.demorouter.config.js --watch"
   },
   "repository": {
     "type": "git",
@@ -19,17 +20,12 @@
     "url": "https://github.com/Glovo/vue-multianalytics/issues"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^6.2.7",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "vue": "^2.3.4",
-    "vue-loader": "^11.3.4",
-    "vue-router": "^2.6.0",
-    "vue-template-compiler": "^2.3.4",
-    "webpack": "^1.15.0"
+    "vue": "^2.5.16",
+    "vue-loader": "^15.2.0",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
   },
   "keywords": [
     "mixpanel",

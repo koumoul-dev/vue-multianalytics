@@ -1,6 +1,6 @@
 import Vue from 'vue/dist/vue.js'
 import VueRouter from 'vue-router'
-import VueMultianalytics from '../../dist/vue-multianalytics.min'
+import VueMultianalytics from '../../src/index'
 import analyticsMixin from './analytics-mixin'
 
 import App from './App.vue'
@@ -9,6 +9,7 @@ import Component2 from './Component2.vue'
 
 // Router configurations
 // -------
+Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   routes: [

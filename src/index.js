@@ -1,4 +1,5 @@
 import AnalyticsPlugin from './AnalyticsPlugin'
+import BasicModule from './modules/BasicModule'
 import GAModule from './modules/GAModule'
 import MixpanelModule from './modules/MixpanelModule'
 import SegmentModule from './modules/SegmentModule'
@@ -110,4 +111,4 @@ const initVueRouterGuard = function (Vue, routing) {
 }
 
 // Export module
-export default { install, addCustomModule }
+export default { install, addCustomModule, BasicModule }
