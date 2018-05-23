@@ -2,7 +2,7 @@
   "name": "vue-multianalytics",
   "version": "1.9.6",
   "description": "A vue multianalytics tool",
-  "main": "./dist/vue-multianalytics.min.js",
+  "main": "./dist/vue-multianalytics.js",
   "author": "Glovoapp, Adrian Latorre, Francisco Zurita",
   "license": "MIT",
   "homepage": "https://github.com/Glovo/vue-multianalytics",
