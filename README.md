@@ -19,6 +19,7 @@ A [VueJS](http://vuejs.org) multianalytics tool
   - [Facebook Pixel](#facebook-pixel)
   - [Segment](#segment)
   - [MParticle](#mparticle)
+  - [Matomo](#matomo)
 - [Custom Modules](#custom-modules)  
 - [Todo](#todo)  
 
@@ -216,7 +217,7 @@ export default {
   * @param viewName
   */
 
-this.$ma.trackView({screenName: 'Homepage'})  
+this.$ma.trackView({viewName: 'Homepage'})  
 ```
 
 ### trackEvent({category = 'Event', action, label = null, value = null})
@@ -451,6 +452,16 @@ debug: true // Whether or not display console logs debugs (optional)
 ```
 Supported Events: `trackView`, `trackEvent`, `setAlias`, `setUserProperties`, `setSuperProperties`
 
+### Matomo
+Name: `matomo`
+Config:
+```javascript
+siteId: '1',
+trackerBase: '//localhost',
+debug: true // Whether or not display console logs debugs (optional)
+paq: [['setCookieDomain', '*.localhost'], ['trackPageView'], ['enableLinkTracking'], ['enableHeartBeatTimer']] // see https://developer.matomo.org/guides/tracking-javascript-guide
+```
+Supported Events: `trackView`, `trackEvent`, `setUsername`
 
 ## Custom Modules
 
