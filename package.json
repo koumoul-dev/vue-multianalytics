@@ -1,11 +1,11 @@
 {
-  "name": "vue-multianalytics",
+  "name": "@koumoul/vue-multianalytics",
   "version": "1.10.0",
   "description": "A vue multianalytics tool",
   "main": "./dist/vue-multianalytics.js",
   "author": "Glovoapp, Adrian Latorre, Francisco Zurita",
   "license": "MIT",
-  "homepage": "https://github.com/Glovo/vue-multianalytics",
+  "homepage": "https://github.com/koumoul-dev/vue-multianalytics",
   "scripts": {
     "build": "webpack",
     "prepublish": "npm run build",
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Glovo/vue-multianalytics.git"
+    "url": "https://github.com/koumoul-dev/vue-multianalytics.git"
   },
   "bugs": {
-    "url": "https://github.com/Glovo/vue-multianalytics/issues"
+    "url": "https://github.com/koumoul-dev/vue-multianalytics/issues"
   },
   "devDependencies": {
     "vue": "^2.5.16",
